@@ -63,6 +63,19 @@ namespace FrontEndApp1.Controllers
 
 
             HttpResponseMessage response = await client.SendAsync(request);
+
+            /*
+{StatusCode: 415, ReasonPhrase: 'Unsupported Media Type', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+  Date: Thu, 16 Apr 2020 00:14:35 GMT
+  Server: Kestrel
+  X-SourceFiles: =?UTF-8?B?YzpcdXNlcnNcdHNhbmp1bFxkb2N1bWVudHNcdmlzdWFsIHN0dWRpbyAyMDE3XFByb2plY3RzXEFQSTFcQVBJMVxhcGlcdmFsdWVz?=
+  X-Powered-By: ASP.NET
+  Content-Length: 0
+}}
+             
+             */
+
             string responseBody = await response.Content.ReadAsStringAsync();
 
             Model1 returnedPassword = new Model1();
